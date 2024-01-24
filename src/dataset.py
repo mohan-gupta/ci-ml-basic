@@ -14,5 +14,5 @@ def get_data():
     return {
         "train": train_df,
         "val": val_df,
-        "class": class_map
+        "class_map": class_map
     }
