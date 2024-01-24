@@ -1,0 +1,1 @@
+MODEL_PATH = "../model/{model_name}_{score:.3}.bin"
