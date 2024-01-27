@@ -13,7 +13,7 @@ def get_baseline_run(entity, project, tag):
     return runs[0]
 
 
-def compare_runs(e):
+def compare_runs():
     "Compare the current run to the baseline run."
     entity = os.getenv('WANDB_ENTITY')
     project = os.getenv('WANDB_PROJECT')
