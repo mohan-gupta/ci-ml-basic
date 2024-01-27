@@ -8,7 +8,7 @@ def get_data():
     class_map = data['target_names']
     
     train_df, val_df = train_test_split(
-        df, shuffle=True, test_size=0.25, random_state=42, stratify=df['target']
+        df, shuffle=True, test_size=0.2, random_state=42, stratify=df['target']
         )
     
     return {
