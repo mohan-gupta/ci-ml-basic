@@ -19,14 +19,16 @@ jobs:
     
             - name: Parse value from the command
               id: get-runid-value
-              run: ./workflow_scripts/get_run_id.py
+              run: |
+                python ./workflow_scripts/get_run_id.py
               env:
                 PR_COMMENT: ${{ github.event.comment.body }}
 
             - name: Generate the comparison report
               if: steps.get-runid-value.outputs.VAL_FOUND == 'true'
               id: wandb-report
-              run: python ./workflow_scripts/compare_runs.py
+              run: |
+                python ./workflow_scripts/compare_runs.py
               env:
                 WANDB_ENTITY: 40-chor
                 WANDB_PROJECT: mnist-exp2
